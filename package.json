@@ -1,6 +1,6 @@
 {
 	"name": "node-percipio-entitlementsreport",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Retrieve a License Consumption/Entitlements Report from Percipio and save locally",
 	"main": "app.js",
 	"scripts": {
