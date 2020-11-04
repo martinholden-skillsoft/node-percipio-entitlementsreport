@@ -38,7 +38,7 @@ The Percipio[https://api.percipio.com/reporting/api-docs/#/%2Fv1/getReportReques
 The default configuration returns JSON and it will be stored in:
 
 ```
-results/YYYYMMDD_hhmmss_results.csv
+results/YYYYMMDD_hhmmss_results.json
 ```
 
 The timestamp component is based on UTC time when the script runs:
