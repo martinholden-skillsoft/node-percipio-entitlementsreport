@@ -34,8 +34,8 @@ const processTemplate = (templateString, templateVars) => {
  * @param {*} options
  * @returns
  */
-const callPercipio = async (options) => {
-  return promiseRetry(async (retry, numberOfRetries) => {
+const callPercipio = async (options) =>
+  promiseRetry(async (retry, numberOfRetries) => {
     const loggingOptions = {
       label: 'callPercipio',
     };
@@ -100,7 +100,6 @@ const callPercipio = async (options) => {
       throw err;
     }
   }, options.retry_options);
-};
 
 /**
  * Submit the report request
@@ -127,8 +126,8 @@ const submitReport = async (options) => {
  * @param {*} reportRequestId
  * @returns
  */
-const pollForReport = async (options, reportRequestId) => {
-  return promiseRetry(async (retry, numberOfRetries) => {
+const pollForReport = async (options, reportRequestId) =>
+  promiseRetry(async (retry, numberOfRetries) => {
     const loggingOptions = {
       label: 'pollForReport',
     };
@@ -169,7 +168,6 @@ const pollForReport = async (options, reportRequestId) => {
       throw err;
     }
   }, options.polling_options);
-};
 
 /**
  * Call the API to generate the report, and the poll for it
@@ -178,9 +176,9 @@ const pollForReport = async (options, reportRequestId) => {
  * @param {*} options
  * @returns {string} file path
  */
-const getAllReportDataAndSave = async (options) => {
+const getAllReportDataAndSave = async (options) =>
   // eslint-disable-next-line no-async-promise-executor
-  return new Promise(async (resolve, reject) => {
+  new Promise(async (resolve, reject) => {
     const loggingOptions = {
       label: 'getAllReportDataAndSave',
     };
@@ -247,8 +245,6 @@ const getAllReportDataAndSave = async (options) => {
       reject(err);
     }
   });
-};
-
 /**
  * Process the Percipio call
  *
