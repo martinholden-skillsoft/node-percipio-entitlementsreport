@@ -15,17 +15,13 @@ config.debug = {};
 // One of the supported default logging levels for winston - see https://github.com/winstonjs/winston#logging-levels
 config.debug.loggingLevel = 'info';
 config.debug.path = 'results';
-config.debug.filename = defer((cfg) => {
-  return `${cfg.startTimestamp}_results.log`;
-});
+config.debug.filename = defer((cfg) => `${cfg.startTimestamp}_results.log`);
 
 config.output = {};
 // Output path
 config.output.path = 'results';
 // Filename
-config.output.filename = defer((cfg) => {
-  return `${cfg.startTimestamp}_results.json`;
-});
+config.output.filename = defer((cfg) => `${cfg.startTimestamp}_results.json`);
 
 // Report Generation Request
 config.reportrequest = {};
